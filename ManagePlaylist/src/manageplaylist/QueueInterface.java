@@ -19,4 +19,6 @@ public interface QueueInterface {
     public void enqueue(Object newItem);
 
     public Object dequeue();
+    
+    public String displayStack();
 }

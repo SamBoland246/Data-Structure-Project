@@ -46,5 +46,20 @@ public class Indie implements QueueInterface {
             return null;
         }
     }
+    
+     public String displayStack() {
+        int iCount;
+        String sMessage = "";
+        if (indiePlaylist.isEmpty()) {
+            sMessage = sMessage.concat("There are no songs to repeat");
+        } else {
+            sMessage = " ";
+            for (iCount = 0; iCount < indiePlaylist.size(); iCount++) {
+                sMessage = sMessage.concat(indiePlaylist.get(iCount));
+                sMessage = sMessage.concat(" \n");
+            }
+        }
+        return sMessage;
+    }
 }
 

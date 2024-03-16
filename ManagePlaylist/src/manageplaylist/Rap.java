@@ -46,4 +46,19 @@ public class Rap implements QueueInterface {
             return null;
         }
     }
+    
+     public String displayStack() {
+        int iCount;
+        String sMessage = "";
+        if (rapPlaylist.isEmpty()) {
+            sMessage = sMessage.concat("There are no songs to repeat");
+        } else {
+            sMessage = " ";
+            for (iCount = 0; iCount < rapPlaylist.size(); iCount++) {
+                sMessage = sMessage.concat(rapPlaylist.get(iCount));
+                sMessage = sMessage.concat(" \n");
+            }
+        }
+        return sMessage;
+    }
 }
