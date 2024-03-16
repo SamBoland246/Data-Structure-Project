@@ -54,5 +54,20 @@ public class LikedSongs implements StackInterface {
     public int size() {
         return likedSongs.size();
     }
+    
+     public String displayStack() {
+        int iCount;
+        String sMessage = "";
+        if (likedSongs.isEmpty()) {
+            sMessage = sMessage.concat("There are no songs to repeat");
+        } else {
+            sMessage = " ";
+            for (iCount = 0; iCount < likedSongs.size(); iCount++) {
+                sMessage = sMessage.concat(likedSongs.get(iCount));
+                sMessage = sMessage.concat(" \n");
+            }
+        }
+        return sMessage;
+    }
 }
 

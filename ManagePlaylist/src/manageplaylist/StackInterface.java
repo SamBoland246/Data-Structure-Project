@@ -20,4 +20,5 @@ public interface StackInterface {
 
     public int size();
 
+   public String displayStack();
 }
